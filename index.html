@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from www.vida-nueva.fun/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Aug 2023 00:28:45 GMT -->
+<head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="imagem/png" href="images/favicon.html"/>
+
+    <title>HACK MINES | GERAR SINAIS</title>
+    <style>
+
+      .caixa {
+        width: 381px;
+        height: 676px;
+        margin: auto;
+        background-image: url('images/bg.png');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #imagem {
+    width: 300px;
+    height: 265px;
+    position: absolute;
+      }
+      #botao-gerar {
+    margin-top: 472px;
+    background-color: #52741a;
+    color: white;
+    font-size: 20px;
+}
+     #botao-finalizar {
+    margin-top: 574px;
+    margin-left: -194px;
+    color: black;
+    font-size: 16px;
+    display: none;
+    border-radius: 5px;
+    width: 127px;
+    height: 26px;
+    background-color: #001e38;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 11px;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    position: absolute;
+}
+      
+      #botao-gerar{
+width: 328px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    margin-top: 462px;
+}
+#botao-gerar:hover, #botao-finalizar:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#botao-apostar {
+    margin-top: 5px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    margin-left: 140px;
+    margin-top: 574px;
+    position: absolute;
+}
+
+#botao-apostar:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ #botao-jogar {
+    margin-top: 343px;
+    margin-left: -5px;
+    /* color: black; */
+    /* font-size: 16px; */
+    border-radius: 5px;
+    width: 193px;
+    height: 27px;
+    background-color: #309307f7;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 11px;
+    outline: none;
+    cursor: pointer;
+    padding: 6px -1px;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+}
+    </style>
+    <style>
+      body {
+        background-color: #121512;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caixa">
+      <img id="imagem" src="images/padrao.png" alt="Imagem padrÃ£o">
+      <br>
+      <button id="botao-jogar">
+  <a href="https://afiliados.greenbets.io/visit/?bta=35174&amp;brand=greenbetsio" target="_blank" rel="noopener noreferrer">
+    Cadastre-se para jogar
+  </a>
+</button>
+      <button id="botao-gerar">
+        Gerar sinal
+      </button>
+      <button id="botao-finalizar">
+        Gerar novo Sinal
+      </button>
+    </div>
+    <script>
+      const imagens = [
+        "images/imagem1.png",
+        "images/imagem2.png",
+        "images/imagem3.png",
+        "images/imagem4.png",
+        "images/imagem5.png",
+          "images/imagem6.png",
+            "images/imagem7.png",
+              "images/imagem8.png",
+                "images/imagem9.png",
+                  "images/imagem10.png",
+                    "images/imagem11.png",
+                      "images/imagem12.png",  
+                      "images/imagem13.png",
+                        "images/imagem14.png",
+                          "images/imagem15.png",
+                            "images/imagem16.png",
+
+        // adicione aqui o caminho para outras imagens
+      ];
+const botaoGerar = document.getElementById("botao-gerar");
+const botaoFinalizar = document.getElementById("botao-finalizar");
+
+botaoGerar.addEventListener("click", function() {
+  const imagem = document.getElementById("imagem");
+  imagem.src = "images/carregando.png";
+  botaoGerar.innerText = "HACKEANDO O MINES!...";
+  botaoGerar.style.backgroundColor = "red";
+
+  setTimeout(function() {
+    imagem.src = imagens[Math.floor(Math.random() * imagens.length)];
+    botaoGerar.innerText = "SINAL ENCONTRADO!";
+    botaoGerar.style.backgroundColor = "#f5a107";
+    botaoGerar.disabled = true;
+    botaoFinalizar.style.display = "inline-block";
+
+    if (botaoGerar.innerText === "SINAL ENCONTRADO!") {
+      const botaoApostar = document.createElement("button");
+      botaoApostar.id = "botao-apostar";
+      botaoApostar.innerText = "CLIQUE AQUI PARA APOSTAR";
+      botaoApostar.addEventListener("click", function() {
+        window.open("https://afiliados.greenbets.io/visit/?bta=35174&amp;brand=greenbetsio");
+      });
+      document.querySelector(".caixa").appendChild(botaoApostar);
+    }
+  }, 4000);
+});
+
+botaoFinalizar.addEventListener("click", function() {
+  const imagem = document.getElementById("imagem");
+  imagem.src = "images/padrao.png";
+  botaoGerar.innerText = "Gerar sinal";
+  botaoGerar.style.backgroundColor = "green";
+  botaoGerar.disabled = false;
+  botaoFinalizar.style.display = "none";
+  document.getElementById("botao-apostar").style.display = "none";
+  
+  location.reload();
+});
+    </script>
+  </body>
+
+<!-- Mirrored from www.vida-nueva.fun/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Aug 2023 00:29:09 GMT -->
+</html>
